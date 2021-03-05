@@ -42,6 +42,7 @@ namespace MVVMBusinessObjectLayer.ViewModels
                 ProductId = 3,
                 Quantity = 3
             });
+            UpdateComputedValue();
         }
 
         public void AddCartItem(CartItem item)
