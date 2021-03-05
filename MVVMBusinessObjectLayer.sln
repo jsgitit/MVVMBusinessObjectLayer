@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMBusinessObjectLayer", "MVVMBusinessObjectLayer.csproj", "{A8E711D7-95D7-4667-9073-4F109ACC3B90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8E711D7-95D7-4667-9073-4F109ACC3B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E711D7-95D7-4667-9073-4F109ACC3B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E711D7-95D7-4667-9073-4F109ACC3B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E711D7-95D7-4667-9073-4F109ACC3B90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3E77A64-3B6F-4BE0-855E-DE172BE4B758}
+	EndGlobalSection
+EndGlobal
