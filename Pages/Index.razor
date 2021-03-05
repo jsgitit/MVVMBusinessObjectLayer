@@ -17,4 +17,10 @@
 	<span>@IndexViewModel.SelectedCartItemModel.Product.Name Price:</span>
 	<input type="number" @bind="IndexViewModel.SelectedCartItemModel.Product.Price" @bind:event="oninput" />
  }
+
+<h4>Computed Value</h4>
+<div>
+	@IndexViewModel.ComputedValue
+</div>
+
 <button @onclick="IndexViewModel.UpdateModels">Update Models</button>

@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Components;
 using MVVMBusinessObjectLayer.BusinessModels;
 using MVVMBusinessObjectLayer.Data;
+using MVVMBusinessObjectLayer.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace MVVMBusinessObjectLayer.ViewModels
 {
-    
+
     public class IndexViewModel : IIndexViewModel, IDisposable
     {
         private readonly DataService dataService;
@@ -24,19 +24,19 @@ namespace MVVMBusinessObjectLayer.ViewModels
             ShoppingCart.CustomerId = 1;
 
             // Add a few shopping cart items
-            ShoppingCart.Items.Add(new CartItemModel(dataService)
+            AddCartItem(new CartItem()
             {
                 Id = 1,
                 ProductId = 1,
                 Quantity = 1
             });
-            ShoppingCart.Items.Add(new CartItemModel(dataService)
+            AddCartItem(new CartItem()
             {
                 Id = 2,
                 ProductId = 2,
                 Quantity = 2
             });
-            ShoppingCart.Items.Add(new CartItemModel(dataService)
+            AddCartItem(new CartItem()
             {
                 Id = 3,
                 ProductId = 3,
@@ -44,9 +44,9 @@ namespace MVVMBusinessObjectLayer.ViewModels
             });
         }
 
-        public void AddCartItem(CartItemModel item)
+        public void AddCartItem(CartItem item)
         {
-            // In order to hook the event, we  need to control
+            // In order to hook the event, we need to control
             // adding and removing cart items
             var model = new CartItemModel(dataService)
             {
