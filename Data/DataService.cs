@@ -16,21 +16,21 @@ namespace MVVMBusinessObjectLayer.Data
                 Id = 1,
                 Name = "Football",
                 Description = "Straight from the NFL",
-                Price = (decimal)10.00
+                Price = (decimal)10.01
             });
             products.Add(new ProductModel()
             {
                 Id = 2,
                 Name = "Basketball",
                 Description = "Straight from the NBA",
-                Price = (decimal)12.00
+                Price = (decimal)12.02
             });
             products.Add(new ProductModel()
             {
                 Id = 3,
                 Name = "Baseball",
                 Description = "Straight from the MLB",
-                Price = (decimal)8.00
+                Price = (decimal)8.03
             });
 
             customers.Add(new CustomerModel()

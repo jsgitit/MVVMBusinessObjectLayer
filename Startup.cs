@@ -29,7 +29,6 @@ namespace MVVMBusinessObjectLayer
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<DataService>();
             services.AddScoped<IIndexViewModel, IndexViewModel>();
 
