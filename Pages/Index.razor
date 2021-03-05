@@ -2,19 +2,19 @@
 @inject IIndexViewModel IndexViewModel
 
 <h1>Shopping Cart</h1>
-<ul>
+<select size="6" @onchange="IndexViewModel.SelectCartItemModel" style="width:100%">
     @foreach (var item in IndexViewModel.ShoppingCart.Items)
-    {
-    <li>
-        <span class="alert-light">&nbsp;@item.Quantity&nbsp;</span>
-        of <span class="alert-light">&nbsp;@item.Product.Name&nbsp;</span>
-        at <span class="alert-light">&nbsp;@item.Product.Price&nbsp;</span>
-        each = <span class="alert-light">&nbsp;@item.Total&nbsp;</span>
-    </li>
-    }
-</ul>
+	{
+		 <option value="@item.Id">@item.Product.Name</option>
+	}
+</select>
 <div>
     Total: @IndexViewModel.ShoppingCart.Total
 </div>
 <br />
+@if(IndexViewModel.SelectedCartItemModel != null)
+ {
+	<span>@IndexViewModel.SelectedCartItemModel.Product.Name Price:</span>
+	<input type="number" @bind="IndexViewModel.SelectedCartItemModel.Product.Price" @bind:event="oninput" />
+ }
 <button @onclick="IndexViewModel.UpdateModels">Update Models</button>
