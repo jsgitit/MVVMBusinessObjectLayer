@@ -6,6 +6,6 @@ namespace MVVMBusinessObjectLayer.Models
     {
         public int Id{ get; set; }
         public int CustomerID { get; set; }
-        public List<CartItem> Items { get; set; } = new()
+        public List<CartItem> Items { get; set; } = new();
     }
 }
