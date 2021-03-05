@@ -45,6 +45,9 @@ namespace MVVMBusinessObjectLayer.ViewModels
 
         public void UpdateModels() // supports "Update Models" button on page
         {
+            // For demo purposes only.
+            // Update a property value from the ViewModel
+            // This helps demonstrate the product's price updating on the UI
             dataService.Products[0].Price += (decimal)1.0;
         }
     }
