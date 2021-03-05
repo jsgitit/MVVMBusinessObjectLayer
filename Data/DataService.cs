@@ -1,8 +1,5 @@
 ﻿using MVVMBusinessObjectLayer.BusinessModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MVVMBusinessObjectLayer.Data
 {
@@ -61,8 +58,8 @@ namespace MVVMBusinessObjectLayer.Data
                 return products;
             }
         }
-        
-        List<CustomerModel> customers= new();
+
+        List<CustomerModel> customers = new();
         public List<CustomerModel> Customers
         {
             get

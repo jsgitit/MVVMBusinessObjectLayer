@@ -2,7 +2,10 @@
 @inject IIndexViewModel IndexViewModel
 
 <h1>Shopping Cart</h1>
-<select size="6" @onchange="IndexViewModel.SelectCartItemModel" style="width:100%">
+<select 
+		size="6" 
+		style="width:100%"
+		@onchange="IndexViewModel.SelectCartItemModel">
     @foreach (var item in IndexViewModel.ShoppingCart.Items)
 	{
 		 <option value="@item.Id">@item.Product.Name</option>
@@ -15,7 +18,9 @@
 @if(IndexViewModel.SelectedCartItemModel != null)
  {
 	<span>@IndexViewModel.SelectedCartItemModel.Product.Name Price:</span>
-	<input type="number" @bind="IndexViewModel.SelectedCartItemModel.Product.Price" @bind:event="oninput" />
+	<input type="number" 
+		   @bind="IndexViewModel.SelectedCartItemModel.Product.Price" 
+		   @bind:event="oninput" />
  }
 
 <h4>Computed Value</h4>

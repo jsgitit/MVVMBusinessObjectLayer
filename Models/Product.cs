@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MVVMBusinessObjectLayer.Models
+﻿namespace MVVMBusinessObjectLayer.Models
 {
     public class Product
     {

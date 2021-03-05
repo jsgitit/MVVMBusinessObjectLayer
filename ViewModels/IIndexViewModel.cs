@@ -15,7 +15,7 @@ namespace MVVMBusinessObjectLayer.ViewModels
 
         // Handle an onchange event from a <select> element
         // for use with binding onchange event in the Index page
-        Task SelectCartItemModel(ChangeEventArgs args);  
+        Task SelectCartItemModel(ChangeEventArgs args);
 
         // This property will help us bind to the selected cart item in the Index page
         CartItemModel SelectedCartItemModel { get; set; }

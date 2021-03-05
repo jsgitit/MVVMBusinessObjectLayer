@@ -1,9 +1,6 @@
 ﻿using MVVMBusinessObjectLayer.Data;
 using MVVMBusinessObjectLayer.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MVVMBusinessObjectLayer.BusinessModels
 {
@@ -34,7 +31,7 @@ namespace MVVMBusinessObjectLayer.BusinessModels
                            select x).FirstOrDefault();
             }
         }
-        
+
         // Product will be availble to us in the UI.
         public ProductModel Product { get; set; }
 
