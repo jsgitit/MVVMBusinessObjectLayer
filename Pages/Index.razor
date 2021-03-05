@@ -5,9 +5,12 @@
 <ul>
     @foreach (var item in IndexViewModel.ShoppingCart.Items)
     {
-        <li class="list-group-item">
-            @item.Quantity of @item.Product.Name at @item.Product.Price each = @item.Total 
-        </li>
+    <li>
+        <span class="alert-light">&nbsp;@item.Quantity&nbsp;</span>
+        of <span class="alert-light">&nbsp;@item.Product.Name&nbsp;</span>
+        at <span class="alert-light">&nbsp;@item.Product.Price&nbsp;</span>
+        each = <span class="alert-light">&nbsp;@item.Total&nbsp;</span>
+    </li>
     }
 </ul>
 <div>

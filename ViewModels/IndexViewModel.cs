@@ -26,19 +26,19 @@ namespace MVVMBusinessObjectLayer.ViewModels
             {
                 Id = 1,
                 ProductId = 1,
-                Quantity = 3
+                Quantity = 1
             });
             ShoppingCart.Items.Add(new CartItemModel(dataService)
             {
                 Id = 2,
                 ProductId = 2,
-                Quantity = 1
+                Quantity = 2
             });
             ShoppingCart.Items.Add(new CartItemModel(dataService)
             {
                 Id = 3,
                 ProductId = 3,
-                Quantity = 2
+                Quantity = 3
             });
         }
         public CartModel ShoppingCart { get; set; } = new();
