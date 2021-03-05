@@ -1,0 +1,26 @@
+﻿
+<div class="card" style="width:max-content">
+    <div class="card-header bg-dark h3 text-white">
+        Cart Summary
+    </div>
+    <div class="card-title">
+        Your cart contains the following items:
+    </div>
+    <div class="card-body">
+        @foreach (var item in ShoppingCart.Items)
+        {
+            <ul>
+                <li>@item.Quantity @item.Product.Name at @item.Product.Price each</li>
+            </ul>
+        }
+    </div>
+    <div class="card-footer">
+        <p class="font-weight-bolder">Cart Total: @ShoppingCart.Total</p>
+    </div>
+</div>
+@code {
+
+    [Parameter]
+    public CartModel ShoppingCart { get; set; }
+
+}

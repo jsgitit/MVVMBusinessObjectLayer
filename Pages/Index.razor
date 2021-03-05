@@ -1,31 +1,38 @@
-﻿@page "/" 
+﻿@page "/"
 @inject IIndexViewModel IndexViewModel
 
 <h1>Shopping Cart</h1>
-<select 
-		size="6" 
-		style="width:100%"
-		@onchange="IndexViewModel.SelectCartItemModel">
+<h4 class="font-italic">
+    (The "Shopping Cart" (select element) contains a list of items already chosen.
+    Clicking an item allows for a price change.
+    Price will update everywhere since events are used in Business Object layer.
+</h4>
+<br />
+<select size="6"
+        style="width:max-content"
+        @onchange="IndexViewModel.SelectCartItemModel">
     @foreach (var item in IndexViewModel.ShoppingCart.Items)
-	{
-		 <option value="@item.Id">@item.Product.Name</option>
-	}
+    {
+        <option value="@item.Id">@item.Product.Name</option>
+    }
 </select>
 <div>
     Total: @IndexViewModel.ShoppingCart.Total
 </div>
 <br />
-@if(IndexViewModel.SelectedCartItemModel != null)
- {
-	<span>@IndexViewModel.SelectedCartItemModel.Product.Name Price:</span>
-	<input type="number" 
-		   @bind="IndexViewModel.SelectedCartItemModel.Product.Price" 
-		   @bind:event="oninput" />
- }
-
-<h4>Computed Value</h4>
-<div>
-	@IndexViewModel.ComputedValue
-</div>
-
+@if (IndexViewModel.SelectedCartItemModel != null)
+{
+    <p>Enter a new Price:</p>
+    <span>@IndexViewModel.SelectedCartItemModel.Product.Name Price:</span>
+    <input type="number"
+           @bind="IndexViewModel.SelectedCartItemModel.Product.Price"
+           @bind:event="oninput" />
+}
+<br />
+<h4 class="font-italic">(Running a method from the ViewModel will update the UI, but B.O. needs events to do the same.)</h4>
 <button @onclick="IndexViewModel.UpdateModels">Add $1.00 to first product</button>
+<br />
+<br />
+<CartSummary ShoppingCart="@IndexViewModel.ShoppingCart" />
+<h4 class="font-italic">(Cart Summary is a separate component taking a ShoppingCart item as a parameter.)</h4>
+
