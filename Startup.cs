@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MVVMBusinessObjectLayer.Data;
+using MVVMBusinessObjectLayer.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace MVVMBusinessObjectLayer
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<DataService>();
+            services.AddScoped<IIndexViewModel, IndexViewModel>();
 
         }
 

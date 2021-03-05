@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MVVMBusinessObjectLayer.ViewModels
 {
-    public class IndexViewModel
+    public class IndexViewModel : IIndexViewModel
     {
         private readonly DataService dataService;
 
